@@ -49,11 +49,35 @@ nav a {
 }
 
 /* Sección Hero */
+/* Video de fondo en hero */
 .hero {
+  position: relative;
+  overflow: hidden;
+  height: 80vh; /* o lo que prefieras, puede ser min-height si prefieres que crezca */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(2, 2, 2);
   text-align: center;
-  padding: 60px 20px;
-  background: #fffafc; /* fondo muy claro */
 }
+
+.video-fondo {
+  position: fixed; /* fijo en pantalla */
+  top: 0;
+  left: 0;
+  width: 100vw; /* ancho pantalla */
+  height: 100vh; /* alto pantalla */
+  object-fit: cover; /* cubre todo el espacio, recorta si es necesario */
+  z-index: -1; /* lo pone detrás del contenido */
+  pointer-events: none; /* no interfiere con clicks */
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
 
 /* Categorías */
 .categorias {
@@ -111,6 +135,36 @@ nav a {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+.informacion {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 400px;
+    }
+
+.informacion img {
+        width: 50px;
+        height: auto;
+    }
+
+.informacion h2 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+.informacion p {
+        margin: 0;
+        font-weight: bold;
+        color: #333;
+    }
+
+.informacion > div {
+        display: flex;
+        flex-direction: column;
+    }
 
 /* Sección Nosotros */
 .nosotros {
