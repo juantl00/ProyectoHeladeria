@@ -102,7 +102,7 @@ nav a {
 
 
 .hero-box {
-  background-color: rgba(255, 255, 255, 0.7); /* blanco semitransparente */
+  background-color: rgba(0, 0, 0, 0.7); /* blanco semitransparente */
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
