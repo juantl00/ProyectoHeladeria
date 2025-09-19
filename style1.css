@@ -30,9 +30,17 @@ header {
 }
 
 header h1 {
-  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+  margin-left: 20px; /* si quieres mantener ese margen */
+  font-size: 1.8rem; /* puedes ajustar el tamaño del texto */
 }
 
+header h1 .logo {
+  width: 50px; /* tamaño del logo */
+  height: auto;
+}
 nav ul {
   display: flex;
   list-style: none;
