@@ -48,6 +48,22 @@ nav a {
   font-weight: bold;
 }
 
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.logo-nombre img {
+  font-size: 100px;
+  margin: 0;
+}
 /* Sección Hero */
 /* Video de fondo en hero */
 .hero {
