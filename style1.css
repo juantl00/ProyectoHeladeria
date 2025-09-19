@@ -56,6 +56,21 @@ nav a {
   font-weight: bold;
 }
 
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+}
+
+.logo {
+  width: 40px; /* tamaño del logo */
+  height: auto;
+}
+
+.logo-nombre h1 {
+  font-size: 40px; /* tamaño del texto */
+  margin: 0;
+}
 /* Sección Hero */
 /* Video de fondo en hero */
 .hero {
