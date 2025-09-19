@@ -163,9 +163,12 @@ nav a {
 
 .producto img {
   width: 100%;
+  height: 200px; /* puedes ajustar este valor según lo que necesites */
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
 .informacion {
         display: flex;
         align-items: center;
