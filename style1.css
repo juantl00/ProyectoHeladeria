@@ -89,7 +89,7 @@ nav a {
   top: 0;
   left: 0;
   width: 100vw; /* ancho pantalla */
-  height: 60vh; /* alto pantalla */
+  height: 100vh; /* alto pantalla */
   object-fit: cover; /* cubre todo el espacio, recorta si es necesario */
   z-index: -1; /* lo pone detrás del contenido */
   pointer-events: none; /* no interfiere con clicks */
