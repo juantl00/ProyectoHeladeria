@@ -88,7 +88,7 @@ nav a {
   position: absolute; /* fijo en pantalla */
   top: 0;
   left: 0;
-  width: 60vw; /* ancho pantalla */
+  width: 80vw; /* ancho pantalla */
   height: 60vh; /* alto pantalla */
   object-fit: cover; /* cubre todo el espacio, recorta si es necesario */
   z-index: -1; /* lo pone detrás del contenido */
