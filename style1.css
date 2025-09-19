@@ -78,6 +78,13 @@ nav a {
   padding: 20px;
 }
 
+.info-hero {
+  padding: 60px 20px;
+  background-color: #fffafc; /* fondo suave opcional */
+  text-align: center;
+}
+
+
 .hero-box {
   background-color: rgba(255, 255, 255, 0.7); /* blanco semitransparente */
   padding: 20px 30px;
@@ -151,6 +158,8 @@ nav a {
         background-color: #f9f9f9;
         border-radius: 8px;
         max-width: 400px;
+        margin: 40px auto;
+        text-align: left;
     }
 
 .informacion img {
