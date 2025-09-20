@@ -3,13 +3,16 @@ const carritoItems = document.getElementById("carrito-items");
 const totalElemento = document.getElementById("total");
 const vaciarBtn = document.getElementById("vaciar-carrito");
 const finalizarBtn = document.getElementById("finalizar-compra");
-const cantidadCarrito = document.getElementById("cantidad-carrito"); // Si tenés el ícono arriba
+const cantidadCarrito = document.getElementById("cantidad-carrito");
 
 let carrito = [];
 
 botonesAgregar.forEach(boton => {
   boton.addEventListener("click", () => {
-    const productoDiv = boton.parentElement;
+    // ✅ CORREGIDO: usar closest para encontrar el contenedor correcto
+    const productoDiv = boton.closest(".producto");
+    if (!productoDiv) return; // prevención de errores
+
     const id = productoDiv.getAttribute("data-id");
     const nombre = productoDiv.getAttribute("data-nombre");
     const precio = parseFloat(productoDiv.getAttribute("data-precio"));
