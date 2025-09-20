@@ -8,15 +8,26 @@ const cantidadCarrito = document.getElementById("cantidad-carrito");
 let carrito = [];
 
 botonesAgregar.forEach(boton => {
-  boton.addEventListener("click", () => {
-    // ✅ CORREGIDO: usar closest para encontrar el contenedor correcto
-    const productoDiv = boton.closest(".producto");
-    if (!productoDiv) return; // prevención de errores
+  boton.addEventListener("click", (e) => {
+    // ✅ Buscar el contenedor correcto del producto
+    const productoDiv = e.target.closest(".producto");
 
-    const id = productoDiv.getAttribute("data-id");
-    const nombre = productoDiv.getAttribute("data-nombre");
-    const precio = parseFloat(productoDiv.getAttribute("data-precio"));
+    if (!productoDiv) {
+      console.error("No se encontró el contenedor del producto.");
+      return;
+    }
 
+    // ✅ Leer los datos desde data attributes
+    const id = productoDiv.dataset.id;
+    const nombre = productoDiv.dataset.nombre;
+    const precio = parseFloat(productoDiv.dataset.precio.replace('.', '').replace(',', '.')); // Para manejar precio tipo 9.900
+
+    if (!id || !nombre || isNaN(precio)) {
+      console.error("Datos del producto inválidos:", { id, nombre, precio });
+      return;
+    }
+
+    // ✅ Agregar al carrito
     const productoExistente = carrito.find(item => item.id === id);
 
     if (productoExistente) {
@@ -41,7 +52,6 @@ function actualizarCarrito() {
       <p><strong>${producto.nombre}</strong> x${producto.cantidad}</p>
       <p>$${(producto.precio * producto.cantidad).toFixed(2)}</p>
     `;
-
     carritoItems.appendChild(div);
 
     total += producto.precio * producto.cantidad;
@@ -54,13 +64,11 @@ function actualizarCarrito() {
   }
 }
 
-// Vaciar carrito
 vaciarBtn.addEventListener("click", () => {
   carrito = [];
   actualizarCarrito();
 });
 
-// Finalizar compra
 finalizarBtn.addEventListener("click", () => {
   if (carrito.length === 0) {
     alert("Tu carrito está vacío.");
