@@ -168,18 +168,50 @@ nav a {
   margin-bottom: 10px;
 }
 
-#carrito-contenedor {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #f9f9f9;
+.carrito-compras {
+  border-top: 2px solid #ccc;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff8dc;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.item-carrito {
+.carrito-items {
+  margin-top: 10px;
+}
+
+.carrito-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.total {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.btn-vaciar,
+.btn-finalizar {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-vaciar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-finalizar {
+  background-color: #007bff;
+  color: white;
 }
 
 .informacion {
