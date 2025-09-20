@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 /* Estilos generales */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: white; /* lavanda claro */
+  background-color: white;
   color: #333;
   line-height: 1.6;
 }
@@ -36,6 +35,7 @@ header h1 {
 nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 nav li {
@@ -48,8 +48,31 @@ nav a {
   font-weight: bold;
 }
 
+/* Ícono del carrito */
+#carrito-icono {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 15px;
+  background-color: #f48fb1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+#contador-carrito {
+  background-color: white;
+  color: #f48fb1;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+/* Logo y título */
 .logo-nombre {
-  display:  flex;
+  display: flex;
   align-items: center;
   gap: 10px;
 }
@@ -60,32 +83,30 @@ nav a {
 }
 
 .logo-nombre img {
-  font-size: 100px;
   margin: 0;
 }
 
 /* Sección Hero */
-/* Video de fondo en hero */
 .hero {
   position: relative;
   overflow: hidden;
-  height: 100vh; /* o lo que prefieras, puede ser min-height si prefieres que crezca */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(2, 2, 2);
+  color: #020202;
   text-align: center;
 }
 
 .video-fondo {
-  position: absolute; /* fijo en pantalla */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw; /* ancho pantalla */
-  height: 80vh; /* alto pantalla */
-  object-fit: cover; /* cubre todo el espacio, recorta si es necesario */
-  z-index: -1; /* lo pone detrás del contenido */
-  pointer-events: none; /* no interfiere con clicks */
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-contenido {
@@ -96,24 +117,22 @@ nav a {
 
 .info-hero {
   padding: 60px 20px;
-  background-color: #fffafc; /* fondo suave opcional */
+  background-color: #fffafc;
   text-align: center;
 }
 
-
 .hero-box {
-  background-color: rgba(255, 255, 255, 0.7); /* blanco semitransparente */
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 600px;
 }
 
-
 /* Categorías */
 .categorias {
   padding: 40px 20px;
-  background: #ffe4e1; /* rosado suave */
+  background: #ffe4e1;
   text-align: center;
 }
 
@@ -126,7 +145,7 @@ nav a {
 }
 
 .categoria {
-  background-color: #ffddee; /* rosa pastel */
+  background-color: #ffddee;
   padding: 15px 25px;
   border-radius: 8px;
   font-weight: bold;
@@ -149,12 +168,17 @@ nav a {
 
 .producto {
   width: 250px;
+  min-height: 460px;
   background: #ffffff;
   border: 1px solid #ffcdd2;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
+  text-align: left;
 }
 
 .producto:hover {
@@ -164,17 +188,34 @@ nav a {
 .producto img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
+.btn-agregar {
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-agregar:hover {
+  background-color: #ec407a;
+}
+
+/* Carrito de compras */
 .carrito-compras {
   border-top: 2px solid #ccc;
   margin-top: 30px;
   padding: 20px;
   background-color: #fff8dc;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -214,40 +255,45 @@ nav a {
   color: white;
 }
 
+.oculto {
+  display: none;
+}
+
+/* Información */
 .informacion {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        max-width: 400px;
-        margin: 40px auto;
-        text-align: left;
-    }
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: left;
+}
 
 .informacion img {
-        width: 50px;
-        height: auto;
-    }
+  width: 50px;
+  height: auto;
+}
 
 .informacion h2 {
-        margin: 0;
-        font-size: 1.2rem;
-    }
+  margin: 0;
+  font-size: 1.2rem;
+}
 
 .informacion p {
-        margin: 0;
-        font-weight: bold;
-        color: #333;
-    }
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
 
 .informacion > div {
-        display: flex;
-        flex-direction: column;
-    }
+  display: flex;
+  flex-direction: column;
+}
 
-/* Sección Nosotros */
+/* Nosotros */
 .nosotros {
   padding: 60px 20px;
   background-color: #fdfdfd;
@@ -275,7 +321,8 @@ form {
   gap: 15px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -283,7 +330,7 @@ form input, form textarea {
 
 form button {
   padding: 10px;
-  background-color: #f48fb1; /* rosa fuerte */
+  background-color: #f48fb1;
   color: white;
   border: none;
   border-radius: 5px;

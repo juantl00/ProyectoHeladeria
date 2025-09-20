@@ -13,19 +13,22 @@
       <img src="logo.jpg" alt="Logo de Gelato Bar" class="logo">
       <h1>Gelato Bar</h1>
     </div>
-    
-    <nav>
-      <ul>
+
+    <nav class="navbar">
+      <ul class="menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#categorias">Categorías</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <span id="carrito-icono">🛒<span id="contador-carrito">0</span></span>
       </ul>
+      <div class="carrito-icono" id="carrito-icono" onclick="toggleCarrito()">
+        🛒 <span id="contador-carrito">0</span>
+      </div>
     </nav>
   </div>
 </header>
+
 
   <section id="inicio" class="hero">
     <video class="video-fondo" autoplay muted loop playsinline >
