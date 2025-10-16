@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+
+  <!-- Fuentes e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tu archivo CSS -->
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-fondo">
+    <source src="fondo.mp4" type="video/mp4">
+  </video>
+
+  <!-- Sección de contacto -->
+  <section class="seccion-contacto">
+    <div class="contacto-contenedor">
+      <h2>Contáctanos</h2>
+
+      <form id="formulario-contacto" class="formulario-contacto">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <textarea placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+        <div id="mensaje-enviado" class="oculto">¡Mensaje enviado correctamente!</div>
+      </form>
+
+      <!-- Información de contacto -->
+      <section id="informacion" class="informacion">
+        <img src="https://cdn-icons-png.flaticon.com/128/4526/4526832.png" alt="Icono de atención al cliente">
+        <div>
+          <h3>Lineas de atención al usuario</h3>
+          <p><i class="fas fa-phone"></i> <strong>Línea Nacional:</strong> 01 8000 455 5232</p>
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Gelatobarheladeria@atencion.co</p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer (fuera de la sección de contacto) -->
+  <footer class="footer">
+    <p>© 2025 Copyright Gelato Bar Heladeria. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Tu JS -->
+  <script src="script.js"></script>
+</body>
+</html>

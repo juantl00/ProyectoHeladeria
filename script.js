@@ -78,3 +78,30 @@ finalizarBtn.addEventListener("click", () => {
     actualizarCarrito();
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  
+  const formulario = document.getElementById('formulario-contacto');
+  const mensajeEnviado = document.getElementById('mensaje-enviado');
+
+  if (formulario && mensajeEnviado) {
+    formulario.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      
+      mensajeEnviado.classList.remove('oculto');
+
+      formulario.reset();
+
+      
+      setTimeout(() => {
+        mensajeEnviado.classList.add('oculto');
+      }, 4000);
+    });
+  }
+
+  
+  const botonContacto = document.getElementById('btn-contacto');
+
+  if (botonContacto) {
+    botonContacto.addEventListener('click', function () {

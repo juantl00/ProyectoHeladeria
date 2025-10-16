@@ -270,3 +270,136 @@ footer {
   padding: 20px;
 }
 
+/* === CONTACTO CON VIDEO DE FONDO === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Video de fondo */
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Contenedor principal */
+.seccion-contacto {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Contenedor del formulario */
+.contacto-contenedor {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.contacto-contenedor h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Formulario */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: none;
+  font-family: inherit;
+}
+
+.formulario-contacto button {
+  padding: 12px;
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #ec407a;
+}
+
+/* Mensaje de éxito */
+#mensaje-enviado {
+  color: green;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Información de contacto */
+.info-contacto {
+  text-align: left;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.8;
+}
+
+.info-contacto p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.info-contacto i {
+  color: #f06292;
+  font-size: 1.2em;
+}
+
+/* Footer fijo abajo si el contenido es corto */
+footer.footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+
