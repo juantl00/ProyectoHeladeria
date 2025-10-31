@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestros Productos</title>
+
+  <!-- Fuentes e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <header>
+  <div class="container header-contenido">
+    <div class="logo-nombre">
+      <img src="logo.jpg" alt="Logo de Gelato Bar" class="logo">
+      <h1>Gelato Bar</h1>
+    </div>
+
+    <nav class="navbar">
+      <ul class="menu">
+        <a href="index.html" >Inicio</a>
+        <a href="productos.html">Productos</a>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <a href="contacto.html">Contacto</a>
+      </ul>
+      <div class="carrito-icono" id="carrito-icono" onclick="toggleCarrito()">
+        🛒 <span id="cantidad-carrito">0</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-fondo">
+    <source src="fondo.mp4" type="video/mp4">
+    
+  </video>
+
+  <main>
+    <h1>Productos destacados</h1>
+
+    <section id="productos" class="productos">
+      <h2>Nuestros Recomendados</h2>
+      <div class="grid-productos">
+
+        <!-- Producto 1 -->
+        <div class="producto" data-id="1" data-nombre="Paletas Frutales" data-precio="9900">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.UiUQAbIBjRvmtQ93oEhmqgHaFj?w=3200&h=2400" alt="Paletas frutales naturales">
+          <h3>Paletas Frutales</h3>
+          <p>Refrescante mezcla de sabores frutales con ingredientes 100% naturales.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto" data-id="2" data-nombre="Helado de Vainilla" data-precio="9900">
+          <img src="https://bing.com/th?id=OSK.74abb418de632f1e2bfb606fa8233a3b" alt="Helado de vainilla natural">
+          <h3>Helado de Vainilla</h3>
+          <p>Cremoso, con un toque de vainilla natural de Madagascar.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto" data-id="3" data-nombre="Helado de Chocolate" data-precio="9900">
+          <img src="https://th.bing.com/th/id/OIP.a9n_GjTtg9kmUyRPvQZofAHaD4" alt="Helado de chocolate oscuro">
+          <h3>Helado de Chocolate</h3>
+          <p>Intenso sabor a cacao con trozos de chocolate oscuro.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto" data-id="4" data-nombre="Helado de Chicle" data-precio="9900">
+          <img src="https://th.bing.com/th/id/R.86cbcc617fed3063b3130422f5a84841" alt="Helado sabor chicle">
+          <h3>Helado de Chicle</h3>
+          <p>Una gran explosión de sabores.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="producto" data-id="5" data-nombre="Helado de Lavanda" data-precio="9900">
+          <img src="https://th.bing.com/th/id/OIP.IBF7PN0wqdjDDllq-3-DBgHaK0" alt="Helado de lavanda con miel y pistacho">
+          <h3>Helado de Lavanda</h3>
+          <p>Lavanda, miel y pistacho crujiente. Floral, cremoso, y con un toque gourmet.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="producto" data-id="6" data-nombre="Helado de Matchami" data-precio="9900">
+          <img src="https://th.bing.com/th/id/OIP.DYDfgly5bHcIK1elPEIctAHaHa" alt="Helado de té matcha y yuzu">
+          <h3>Helado de Matchami</h3>
+          <p>Té matcha con yuzu y un toque cítrico. Verde, refrescante, moderno.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="producto" data-id="7" data-nombre="Helado de Olival" data-precio="9900">
+          <img src="https://th.bing.com/th/id/OIP.RiBRBdztaSdas0pQRgDYrwHaEr" alt="Helado de aceite de oliva con limón y sal">
+          <h3>Helado de Olival</h3>
+          <p>Aceite de oliva virgen con limón y flor de sal. Sutil, elegante, sorprendente.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="producto" data-id="8" data-nombre="Helado Fuego Negro" data-precio="9900">
+          <img src="fuego-negro.webp" alt="Helado Fuego Negro - Chocolate y chile">
+          <h3>Helado Fuego Negro</h3>
+          <p>Chocolate oscuro con chile y sal marina. Intenso, picante y profundo.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="producto" data-id="9" data-nombre="Helado Mokaela" data-precio="9900">
+          <img src="mokaela.webp" alt="Helado Mokaela - café y chocolate">
+          <h3>Helado Mokaela</h3>
+          <p>Intensa combinación de moka, espresso y chocolate amargo.</p>
+          <p class="precio">$9,900 C/U</p>
+          <button class="btn-agregar" type="button">Agregar al carrito</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+   <footer class="footer">
+    <p>© 2025 Copyright Gelato Bar Heladeria. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

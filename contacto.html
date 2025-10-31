@@ -8,11 +8,29 @@
   <!-- Fuentes e iconos -->
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Tu archivo CSS -->
   <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
+  <header>
+  <div class="container header-contenido">
+    <div class="logo-nombre">
+      <img src="logo.jpg" alt="Logo de Gelato Bar" class="logo">
+      <h1>Gelato Bar</h1>
+    </div>
+
+    <nav class="navbar">
+      <ul class="menu">
+        <a href="index.html" >Inicio</a>
+        <a href="productos.html">Productos</a>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <a href="contacto.html">Contacto</a>
+      </ul>
+      <div class="carrito-icono" id="carrito-icono" onclick="toggleCarrito()">
+        🛒 <span id="cantidad-carrito">0</span>
+      </div>
+    </nav>
+  </div>
+</header>
 
   <!-- Video de fondo -->
   <video autoplay muted loop class="video-fondo">

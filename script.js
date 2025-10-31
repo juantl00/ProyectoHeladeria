@@ -1,3 +1,4 @@
+// --- Carrito de Compras ---
 const botonesAgregar = document.querySelectorAll(".btn-agregar");
 const carritoItems = document.getElementById("carrito-items");
 const totalElemento = document.getElementById("total");
@@ -9,7 +10,6 @@ let carrito = [];
 
 botonesAgregar.forEach(boton => {
   boton.addEventListener("click", (e) => {
-    // ✅ Buscar el contenedor correcto del producto
     const productoDiv = e.target.closest(".producto");
 
     if (!productoDiv) {
@@ -17,17 +17,15 @@ botonesAgregar.forEach(boton => {
       return;
     }
 
-    // ✅ Leer los datos desde data attributes
     const id = productoDiv.dataset.id;
     const nombre = productoDiv.dataset.nombre;
-    const precio = parseFloat(productoDiv.dataset.precio.replace('.', '').replace(',', '.')); // Para manejar precio tipo 9.900
+    const precio = parseFloat(productoDiv.dataset.precio.replace('.', '').replace(',', '.'));
 
     if (!id || !nombre || isNaN(precio)) {
       console.error("Datos del producto inválidos:", { id, nombre, precio });
       return;
     }
 
-    // ✅ Agregar al carrito
     const productoExistente = carrito.find(item => item.id === id);
 
     if (productoExistente) {
@@ -41,6 +39,8 @@ botonesAgregar.forEach(boton => {
 });
 
 function actualizarCarrito() {
+  if (!carritoItems) return;
+
   carritoItems.innerHTML = "";
   let total = 0;
   let totalCantidad = 0;
@@ -58,29 +58,36 @@ function actualizarCarrito() {
     totalCantidad += producto.cantidad;
   });
 
-  totalElemento.textContent = total.toFixed(2);
+  if (totalElemento) {
+    totalElemento.textContent = total.toFixed(2);
+  }
+
   if (cantidadCarrito) {
     cantidadCarrito.textContent = totalCantidad;
   }
 }
 
-vaciarBtn.addEventListener("click", () => {
-  carrito = [];
-  actualizarCarrito();
-});
-
-finalizarBtn.addEventListener("click", () => {
-  if (carrito.length === 0) {
-    alert("Tu carrito está vacío.");
-  } else {
-    alert("Gracias por tu compra!");
+if (vaciarBtn) {
+  vaciarBtn.addEventListener("click", () => {
     carrito = [];
     actualizarCarrito();
-  }
-});
+  });
+}
 
+if (finalizarBtn) {
+  finalizarBtn.addEventListener("click", () => {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+    } else {
+      alert("Gracias por tu compra!");
+      carrito = [];
+      actualizarCarrito();
+    }
+  });
+}
+
+// --- Formulario de contacto ---
 document.addEventListener('DOMContentLoaded', function () {
-  
   const formulario = document.getElementById('formulario-contacto');
   const mensajeEnviado = document.getElementById('mensaje-enviado');
 
@@ -88,20 +95,25 @@ document.addEventListener('DOMContentLoaded', function () {
     formulario.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      
       mensajeEnviado.classList.remove('oculto');
-
       formulario.reset();
 
-      
       setTimeout(() => {
         mensajeEnviado.classList.add('oculto');
       }, 4000);
     });
   }
 
-  
+  // --- Botón de Contacto que hace scroll y no recarga ---
   const botonContacto = document.getElementById('btn-contacto');
 
   if (botonContacto) {
-    botonContacto.addEventListener('click', function () {
+    botonContacto.addEventListener('click', function (e) {
+      e.preventDefault();
+      const seccionContacto = document.getElementById("contacto");
+      if (seccionContacto) {
+        seccionContacto.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+});
